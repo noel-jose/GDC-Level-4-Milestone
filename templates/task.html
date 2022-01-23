@@ -6,7 +6,10 @@
 
 <h2>Tasks</h2>
 {% for task in tasks%}
-{{ forloop.counter }}. {{task}}<a href="/delete-task/{{forloop.counter}}"> Delete Task</a> <a href="/complete_task/{{forloop.counter}}"> Mark as Complete</a><br>
+{{ forloop.counter }}. {{task}} --- <a href="/delete-task/{{forloop.counter}}"> Delete Task</a>   <a href="/complete_task/{{forloop.counter}}"> Mark as Complete</a><br>
 {% empty %}
 No tasks are present
 {% endfor %}
+
+<br><br>
+<a href="/all_tasks/">All Tasks</a>  ---  <a href="/completed_tasks/">Completed Tasks</a>
