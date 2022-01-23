@@ -13,7 +13,7 @@ def task_view(request):
 
 
 def add_task_view(request):
-    task = request.GET.get("taskname")
+    task = request.GET.get("task")
     tasks.append(task)
     return HttpResponseRedirect("/tasks/")
 
